@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+}
+
+:root {
+  --gradient: hsl(6, 100%, 80%);
+  --pink: hsl(335, 100%, 65%);
+  --pale-blue: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --dark-blue: hsl(228, 56%, 26%);
+  --very-dark-blue: hsl(229, 57%, 11%);
+  }
+
+.contenart {
+  background: url(../images/bg-desktop.png) no-repeat var(--very-dark-blue);
+  background-position: bottom;
+  background-size: 100%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenart .icon-div {
+  width: 350px;
+  height: 200px;
+  background: var(--dark-blue);
+  padding: 40px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-top-right-radius: 80px;
+}
+
+.contenart .icon-div .image {
+  display: flex;
+}
+
+.contenart .icon-div .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--very-dark-blue);
+  width: 45px;
+  height: 45px;
+  margin-top: 30px;
+  margin-right: 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.contenart .card {
+  width: 540px;
+  height: 150px;
+  background: var(--dark-blue);
+  position: relative;
+  margin-left: 30px;
+  padding: 35px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.contenart .card .info {
+  color: var(--grayish-blue);
+  margin-bottom: 15px;
+}
+
+.contenart .card .info span {
+  color: var(--pale-blue);
+  font-weight: bold;
+}
+
+.contenart .card .left {
+  color: black;
+  background: white;
+  width: 180px;
+  height: 70px;
+  position: absolute;
+  top: -25%;
+  right: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 26px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.contenart .card .left::before {
+  content: "";
+  position: absolute;
+  border: 20px solid ;
+  border-color: white transparent transparent transparent;
+  bottom: -15%;
+  right: -11%;
+  transform: rotate(210deg);
+  -webkit-transform: rotate(210deg);
+  -moz-transform: rotate(210deg);
+  -ms-transform: rotate(210deg);
+  -o-transform: rotate(210deg);
+}
+
+.contenart .card .left span {
+  color: var(--grayish-blue);
+  padding-left: 10px;
+}
+
+.contenart .card .border-back {
+  width: 455px;
+  height: 20px;
+  background: var(--very-dark-blue);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.contenart .card .border-back .border-color {
+  position: relative;
+  background-image: linear-gradient(    to right, var(--gradient) ,    var(--pink) );
+  width: 70%;
+  height: 18px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.contenart .card .border-back .border-color .ridus {
+  position: absolute;
+  right: 0;
+  background: white;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.contenart .card .data {
+  display: flex;
+  position: relative;
+  margin-top: 10px;
+}
+
+.contenart .card .data .leftd {
+  color: var(--pale-blue);
+}
+
+.contenart .card .data .rightd {
+  color: var(--grayish-blue);
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+}
+
+@media (max-width: 767px) {
+  .contenart {
+    background: url(../images/bg-mobile.png) no-repeat var(--very-dark-blue);
+    flex-direction: column;
+  }
+  .contenart .icon-div {
+    width: 325px;
+  }
+  .contenart .card {
+    width: 325px;
+    height: 160px;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+  .contenart .card .left {
+    top: 75%;
+    right: 25%;
+  }
+  .contenart .card .left::before {
+    display: none;
+  }
+  .contenart .card .border-back {
+    width: 260px;
+  }
+}
+
+.attribution {
+  font-size: 11px; text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
